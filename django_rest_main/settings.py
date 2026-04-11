@@ -23,18 +23,31 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ap=od5orxnixmr*$#&v4=ua-(u@4nfo82!kay#2lo(0_m#vb&r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_HTTPONLY=False
+DEBUG = False
+
+
 
 ALLOWED_HOSTS = [
-    "django-drf-multi-api-project.onrender.com"
+    "django-drf-multi-api-project.onrender.com",
+    "127.0.0.1",
+    "localhost"
 ]
-
 CSRF_TRUSTED_ORIGINS = [
     "https://django-drf-multi-api-project.onrender.com"
 ]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
+
+# Required for production
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
+# Important for cross-site (Render + browser)
+CSRF_COOKIE_SAMESITE = "None"
+SESSION_COOKIE_SAMESITE = "None"
+CSRF_COOKIE_HTTPONLY = False
 
 # Application definition
 
