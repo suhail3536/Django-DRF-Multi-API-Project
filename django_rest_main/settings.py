@@ -24,15 +24,17 @@ SECRET_KEY = 'django-insecure-ap=od5orxnixmr*$#&v4=ua-(u@4nfo82!kay#2lo(0_m#vb&r
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-CSRF_COOKIE_SECURE=True
-SESSION_COOKIE_SECURE=True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_HTTPONLY=False
 
-ALLOWED_HOSTS = ['django-drf-multi-api-project.onrender.com']
-
-CSRF_TRUSTED_ORIGINS =[
-    "https://django-drf-multi-api-project.onrender.com"
+ALLOWED_HOSTS = [
+    "django-drf-multi-api-project.onrender.com"
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://django-drf-multi-api-project.onrender.com"
+]
 
 # Application definition
 
