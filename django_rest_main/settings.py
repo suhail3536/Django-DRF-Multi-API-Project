@@ -145,8 +145,3 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 
-User = get_user_model()
-
-if os.environ.get('CREATE_SUPERUSER') == 'True':
-    from django.contrib.auth import get_user_model
-    User = get_user_model()
