@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     'api',
     'employees',
     'worker',
+    'employee.apps.EmployeeConfig', 
 ]
 
 MIDDLEWARE = [
