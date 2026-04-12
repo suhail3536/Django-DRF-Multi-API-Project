@@ -62,7 +62,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'students',
     'api',
-    'employees',
+    
     'worker',
     'employees.apps.EmployeesConfig', 
 ]
